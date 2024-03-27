@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { DocumentHead, Link, routeLoader$ } from "@builder.io/qwik-city";
+import { type DocumentHead, Link, routeLoader$ } from "@builder.io/qwik-city";
 import imagesMap, { ImageBackArrow } from "~/components/Image";
 import { GroupContent } from "~/components/content/GroupContent";
 
