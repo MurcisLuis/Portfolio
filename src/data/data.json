@@ -1,0 +1,98 @@
+[
+    {
+      "id": "lujoemotes",
+      "name": "LujoEmotes",
+      "image": "logo-lujoemotes.png",
+      "description": "A Premium Minecraft plugin that transforms player interactions by offering custom emotes for deaths and assassinations.",
+      "features": [
+        {"name": "Emotes Animation","icon":"","description":"Player death and murder emotes"},
+        {"name": "PlaceholderAPI Integration","icon":"","description":"Allows to obtain with placeholder api all the information of the emotes of players."},
+        {"name": "Database","icon":"","description":"Support SQLite, MySQL ,MariaDB"},
+        {"name": "Easy Files config","icon":"","description":"The configuration files are easy to use."},
+        {"name": "Fully customizable","icon":"","description":"You can create your own animations."},
+        {"name": "All language support","icon":"","description":"Translate it to the language of your choice."},
+        {"name": "MythicMobs","icon":"","description":"You can summon things that are not animations, if you want to use it for another purpose when you die, for example a minion."},
+        {"name": "ModelEngine","icon":"","description":"You can invoke entities/animations with custom 3d models with ModelEngine."}
+
+      ],
+      "technologies": [
+        {"name": "Java 17", "icon": "java"},
+        {"name": "Gradle", "icon": "gradle"},
+        {"name": "Spigot", "icon": "spigot"},
+        {"name": "MythicMobs", "icon": "mythicMobs"},
+        {"name": "MySQL", "icon": "mysql"},
+        {"name": "MariaDB", "icon": "maria"},
+        {"name": "SQLite", "icon": "sqlite"}
+      ],
+      "links": [
+        {"name": "BuiltByBit", "url": "https://builtbybit.com/resources/lujoemotes.40218/", "icon": "builtbybit","price":19.99},
+        {"name": "Polymart", "url": "https://polymart.org/resource/lujoemotes.5551", "icon": "polymart","price":19.99},
+        {"name": "GitBook", "url": "https://murcisluis.gitbook.io/lujoemotes", "icon": "gitbook"},
+        {"name": "GitHub Issues", "url": "https://github.com/MurcisLuis/Issues-LujoEmotes", "icon": "github"}
+      ]
+    },
+    {
+      "id": "lujokarts",
+      "name": "LujoKarts",
+      "image": "logo-lujokarts.png",
+      "description": "WIP.",
+      "features": [
+        
+      ],
+      "technologies": [
+        {"name": "Java 17", "icon": "java"},
+        {"name": "Gradle", "icon": "gradle"},
+        {"name": "Spigot", "icon": "spigot"},
+        {"name": "MythicMobs", "icon": "mythicMobs"},
+        {"name": "ModelEngine", "icon": "modelEngine"},
+        {"name": "PlaceholderAPI", "icon": "placeholderAPI"},
+        {"name": "MySQL", "icon": "mysql"},
+        {"name": "MariaDB", "icon": "maria"},
+        {"name": "SQLite", "icon": "sqlite"}
+      ],
+      "links": [
+        {"name": "GitHub Issues", "url": "https://github.com/MurcisLuis/Issues-LujoKarts", "icon": "github"},
+        {"name": "Documentation", "url": "", "icon": "gitbook"}
+      ]
+    },
+    {
+      "id": "baseplugin",
+      "name": "BasePlugin",
+      "image": "logo-baseplugin.png",
+      "description": "BasePlugin es una solución integral para desarrolladores de Minecraft, ofreciendo un conjunto de herramientas y API para la creación de plugins personalizados. Este proyecto simplifica el desarrollo de plugins, permitiendo a los creadores centrarse en la innovación.",
+      "features": [
+        {"name": "All in one", "icon": "", "description": "Allows development for both Spigot and BungeeCord within the same project"},
+        {"name": "Modular", "icon": "", "description": "Enables generation of JAR files with only the essentials"}
+                
+      ],
+      "technologies": [
+        {"name": "Java", "icon": "java"},
+        {"name": "Spigot", "icon": "spigot"},
+        {"name": "BungeeCord", "icon": "bungeecord"},
+        {"name": "PlaceholderAPI", "icon": "placeholderAPI"},
+        {"name": "Gradle", "icon": "gradle"}
+      ],
+      "links": [
+        {"name": "GitHub", "url": "https://github.com/MurcisLuis/baseplugin", "icon": "github"}
+      ]
+    },
+    {
+      "id": "blockcounter",
+      "name": "BlockCounter",
+      "image": "logo-blockcounter.png",
+      "description": "It is a placeholderExtension which gives us the information of a block with its placeholder.",
+      "features": [
+        {"name": "Simple","icon":"","description":"Simple and minimalist use and installation"}
+      ],
+      "technologies": [
+        {"name": "Java 17", "icon": "java"},
+        {"name": "PlaceholderAPI", "icon": "placeholderAPI"}
+      ],
+      "links": [
+        {"name": "Download", "url": "https://github.com/MurcisLuis/BlockCounter/releases/tag/1.0", "icon": "github","price":0 },
+        {"name": "GitHub", "url": "https://github.com/MurcisLuis/blockcounter", "icon": "github"}
+
+      ]
+    }
+  ]
+  

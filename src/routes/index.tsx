@@ -5,49 +5,9 @@ import { GroupContent } from "~/components/content/GroupContent";
 import { Countdown } from "~/components/countdown/CountdownComponent";
 import { Weather } from "~/components/weather/WeatherComponent";
 import { ContactForm } from "~/components/contactform/ContactMe";
-import Image from "~/media/lujoemotes.png?jsx"
-import ImageKarts from "~/media/logo-lujokarts.png?jsx"
-import ImageBasePlugin from "~/media/logo-baseplugin.png?jsx"
-import ImageBlockCounter from "~/media/logo-blockcounter.png?jsx"
-import ImageAndroid from "~/media/android.svg?jsx"
-import ImageBitBucket from "~/media/bitbucket.svg?jsx"
-import ImageBoostrap from "~/media/boostrap.svg?jsx"
-import ImageComposer from "~/media/composer.svg?jsx"
-import ImageCss from "~/media/css.svg?jsx"
-import ImageDocker from "~/media/docker.svg?jsx"
-import ImageFigma from "~/media/figma.svg?jsx"
-import ImageFirebase from "~/media/firebase.svg?jsx"
-import ImageGit from "~/media/git.svg?jsx"
-import ImageGitHub from "~/media/github.svg?jsx"
-import ImageGitBook from "~/media/gitbook.svg?jsx"
-import ImageGradle from "~/media/gradle.svg?jsx"
-import ImageHtml from "~/media/html.svg?jsx"
-import ImageIntellj from "~/media/intellj.svg?jsx"
-import ImageJava from "~/media/java.svg?jsx"
-import ImageMaria from "~/media/mariadb.svg?jsx"
-import ImageMaven from "~/media/maven.svg?jsx"
-import ImageModelEngine from "~/media/ModelEngine.png?jsx"
-import ImageMysql from "~/media/mysql.svg?jsx"
-import ImageMythicMobs from "~/media/MythicMobs.png?jsx"
-import ImageNode from "~/media/node.svg?jsx"
-import ImageNpm from "~/media/npm.svg?jsx"
-import ImageOracle from "~/media/oracle.svg?jsx"
-import ImagePaper from "~/media/paper.svg?jsx"
-import ImagePhp from "~/media/php.svg?jsx"
-import ImagePipy from "~/media/pipy.svg?jsx"
-import ImagePython from "~/media/python.svg?jsx"
-import ImageQwik from "~/media/qwik.svg?jsx"
-import ImageReact from "~/media/react.svg?jsx"
-import ImageSpigot from "~/media/spigot.png?jsx"
-import ImageSQLite from "~/media/sqlite.svg?jsx"
-import ImageSymphony from "~/media/symphony.svg?jsx"
-import ImageTailwindcss from "~/media/tailwindcss.svg?jsx"
-import ImageVsCode from "~/media/vscode.svg?jsx"
 
-
-
-
-
+import { ProjectsCards } from "~/components/projects/ProyectsCards";
+import { ImageAndroid, ImageBitBucket, ImageBoostrap, ImageComposer, ImageCss, ImageDocker, ImageFigma, ImageFirebase, ImageGit, ImageGitHub, ImageGradle, ImageHtml, ImageIntellj, ImageJava, ImageMaria, ImageMaven, ImageModelEngine, ImageMysql, ImageMythicMobs, ImageNode, ImageNpm, ImageOracle, ImagePaper, ImagePhp, ImagePipy, ImagePython, ImageQwik, ImageReact, ImageSQLite, ImageSpigot, ImageSymphony, ImageTailwindcss, ImageVsCode } from "~/components/Image";
 
 export default component$(() => (
   <>
@@ -102,7 +62,7 @@ export default component$(() => (
             <Countdown targetDay={15} targetMonth={6} />
           </ContentSection>
           <GroupContent colSpan={6} class={'h-40 md:h-52'}>
-            <Link href="https://github.com/MurcisLuis" target="_blank" class=' group relative flex h-full w-full flex-col justify-between overflow-hidden rounded-2xl transform-gpu transition-all duration-500 will-change-[outline,_transform] group-hover:scale-95 active:scale-100 dark:bg-zinc-600 bg-gray-100 grid grid-cols-6 items-center dark:text-white text-black'>
+            <Link href="https://github.com/MurcisLuis" target="_blank" class=' group relative h-full w-full flex-col justify-between overflow-hidden rounded-2xl transform-gpu transition-all duration-500 will-change-[outline,_transform] group-hover:scale-95 active:scale-100 dark:bg-zinc-600 bg-gray-100 grid grid-cols-6 items-center dark:text-white text-black'>
             <ImageGitHub class="dark:fill-white col-span-3 md:col-span-2 ml-5 sm:ml-10 md:ml-20 w-20 h-full sm:w-32 md:w-50" />
             <div class="col-span-3 md:col-span-4 text-xl md:text-4xl font-mono">
             <p>Github</p>
@@ -111,26 +71,7 @@ export default component$(() => (
             </div>
             </Link>
           </GroupContent>
-          <GroupContent colSpan={3} mdColSpan={2} class={'h-40 md:h-52'}>
-              <Link href="https://builtbybit.com/resources/lujoemotes.40218/" target="_blank" class='group relative h-full w-full flex flex-col justify-center items-center overflow-hidden rounded-2xl transform transition-all duration-500 hover:scale-95 active:scale-100 dark:bg-zinc-600 bg-gray-100 '>
-                <Image class="w-24 h-16 sm:w-28 sm:h-20 md:w-36 md:h-28 sm:scale-125 mx-auto"/>
-              </Link>
-          </GroupContent>
-          <GroupContent colSpan={3} mdColSpan={2} class={'h-40 md:h-52'}>
-              <Link href="https://github.com/MurcisLuis/Issues-LujoKarts" target="_blank" class='group relative h-full w-full flex flex-col justify-center items-center overflow-hidden rounded-2xl transform transition-all duration-500 hover:scale-95 active:scale-100 dark:bg-zinc-600 bg-gray-100 '>
-                <ImageKarts class="w-24 h-16 sm:w-28 sm:h-20 md:w-36 md:h-28 sm:scale-125 mx-auto"/>
-              </Link>
-          </GroupContent>
-          <GroupContent colSpan={3} mdColSpan={2} class={'h-40 md:h-52'}>
-              <Link href="https://github.com/MurcisLuis/BasePlugin/" target="_blank" class='group relative h-full w-full flex flex-col justify-center items-center overflow-hidden rounded-2xl transform transition-all duration-500 hover:scale-95 active:scale-100 dark:bg-zinc-600 bg-gray-100 '>
-                <ImageBasePlugin class="w-24 h-16 sm:w-28 sm:h-20 md:w-36 md:h-28 sm:scale-125 mx-auto"/>
-              </Link>
-          </GroupContent>
-          <GroupContent colSpan={3} mdColSpan={2} class={'h-40 md:h-52'}>
-              <Link href="https://github.com/MurcisLuis/BlockCounter/" target="_blank" class='group relative h-full w-full flex flex-col justify-center items-center overflow-hidden rounded-2xl transform transition-all duration-500 hover:scale-95 active:scale-100 dark:bg-zinc-600 bg-gray-100 '>
-                <ImageBlockCounter class="w-24 h-16 sm:w-28 sm:h-20 md:w-36 md:h-28 sm:scale-125 mx-auto"/>
-              </Link>
-          </GroupContent>
+          <ProjectsCards/>
           
           <div class="col-span-6 space-y-2 rounded-2xl bg-yellow-200 p-6 dark:bg-indigo-800 md:col-span-4 grid grid-cols-5 sm:grid-cols-8 md:grid-cols-11 gap-2 items-center">
             {/* Específicos de Minecraft */}
