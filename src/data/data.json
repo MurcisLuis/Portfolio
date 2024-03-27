@@ -59,7 +59,7 @@
       "id": "baseplugin",
       "name": "BasePlugin",
       "image": "logo-baseplugin.png",
-      "description": "BasePlugin es una solución integral para desarrolladores de Minecraft, ofreciendo un conjunto de herramientas y API para la creación de plugins personalizados. Este proyecto simplifica el desarrollo de plugins, permitiendo a los creadores centrarse en la innovación.",
+      "description": "BasePlugin is a comprehensive Minecraft development solution, providing tools and APIs for custom plugin creation. This project streamlines plugin development, enabling creators to focus on innovation.",
       "features": [
         {"name": "All in one", "icon": "", "description": "Allows development for both Spigot and BungeeCord within the same project"},
         {"name": "Modular", "icon": "", "description": "Enables generation of JAR files with only the essentials"}
