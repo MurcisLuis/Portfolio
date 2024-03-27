@@ -13,7 +13,7 @@ export default component$(() => (
   <>
     <div class="min-h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-purple-900 to-slate-900">
       <div class="space-y-6">
-        <main class="mx-auto grid max-w-3xl grid-cols-6 gap-6 px-6 pt-16">
+        <main class="mx-auto grid max-w-3xl grid-cols-6 gap-6 px-6 py-16">
           <GroupContent colSpan={6} mdColSpan={4} class={"h-auto md:h-52 justify-between overflow-hidden rounded-2xl bg-pink-200 px-8 py-8 dark:border-pink-500 dark:bg-pink-500/25 dark:shadow-none dark:backdrop-blur-2xl"}>
             {/** 
             <div class="flex">

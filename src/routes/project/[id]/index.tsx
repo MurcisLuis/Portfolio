@@ -78,19 +78,19 @@ export default component$(() => {
           </GroupContent>
           
           {project.value.links.map((link: any) => (
-            <GroupContent key={link.name} colSpan={3} mdColSpan={2} class="h-40 md:h-auto">
-              <Link href={link.url} target={link.url.startsWith('http') ? "_blank" : "_self"} class="rounded-lg bg-gradient-to-tr flex flex-col justify-between overflow-hidden h-full min-h-[220px] from-teal-500 to-teal-400 p-6 shadow-lg dark:from-teal-700 dark:to-teal-600 hover:scale-105 transition-transform duration-300 ease-in-out">
+            <GroupContent key={link.name} colSpan={3} class="h-auto">
+              <Link href={link.url} target={link.url.startsWith('http') ? "_blank" : "_self"} class="rounded-lg bg-gradient-to-tr flex flex-col justify-between overflow-hidden h-full w-full min-h-[220px] from-teal-500 to-teal-400 p-6 shadow-lg dark:from-teal-700 dark:to-teal-600 hover:scale-105 transition-transform duration-300 ease-in-out">
                 <div class="flex flex-col justify-between h-full">
                   <div class="w-full flex justify-center">
                     {link.icon && imagesMap[link.icon] ? imagesMap[link.icon]({ alt: link.name, width: 200, height: 200, class: "object-contain max-w-full max-h-full w-[200px] h-[200px]" }) : <div class="w-52 h-52 flex items-center justify-center"><span class="my-auto">Icono no disponible</span></div>}
                   </div>
                   <div class="text-center">
-                    <p class="text-xl font-semibold text-gray-800 dark:text-teal-100">{link.name}</p>
-                    <p class="text-sm text-gray-700 dark:text-teal-200">{link.description}</p>
+                    <p class="text-sm sm:text-lg md:text-xl font-semibold text-gray-800 dark:text-teal-100">{link.name}</p>
+                    <p class="text-xs sm:text-sm text-gray-700 dark:text-teal-200">{link.description}</p>
                   </div>
                   {typeof link.price !== 'undefined' && (
                     <div class="mt-2 self-end">
-                      {link.price === 0 ? <span class="text-sm font-semibold text-gray-800 dark:text-teal-100">Free</span> : <span class="text-sm font-semibold text-gray-800 dark:text-teal-100">${link.price}</span>}
+                      {link.price === 0 ? <span class="text-xs sm:text-sm sm:font-semibold text-gray-800 dark:text-teal-100">Free</span> : <span class="text-sm font-semibold text-gray-800 dark:text-teal-100">${link.price}</span>}
                     </div>
                   )}
                 </div>
