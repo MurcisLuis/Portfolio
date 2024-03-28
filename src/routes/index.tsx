@@ -144,11 +144,7 @@ export const head: DocumentHead = {
     },
     { 
       name: "keywords",
-      content: "Murcis, Luis Aldea Diez,Luis, LujoEmotes, LujoKarts, BasePlugin, Developer Fullstack, Developer Plugins Minecraft,Developer Web,Developer Android" 
-    },
-    {
-      name: "og:locale",
-      content: "en_US",
+      content: "Murcis_Luis, Luis Aldea Diez, Murcis Luis, LujoEmotes, LujoKarts, BasePlugin, Developer Fullstack, Developer Plugins Minecraft, Developer Web, Developer Android" 
     },
 
   ],

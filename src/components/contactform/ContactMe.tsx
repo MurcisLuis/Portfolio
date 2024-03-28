@@ -36,11 +36,11 @@ export const ContactForm = component$(() => {
       store.showAlert = true;
       setTimeout(() => {
         store.showAlert = false;
-      }, 3000); // Alert disappears after 3 seconds
+      }, 30000); // Alert disappears after 30 seconds
     }
     
     store.showAlert = true;
-    setTimeout(() => store.showAlert = false, 3000); // Alert disappears after 3 seconds
+    setTimeout(() => store.showAlert = false, 30000); // Alert disappears after 30 seconds
     target.reset();
   },
   );
@@ -49,7 +49,7 @@ export const ContactForm = component$(() => {
   useVisibleTask$(() => {
     const timeoutId = setTimeout(() => {
       store.showAlert = false;
-    }, 3000); // Automatically hide the alert after 3 seconds
+    }, 30000); // Automatically hide the alert after 30 seconds
 
     return () => clearTimeout(timeoutId); // Cleanup function to clear the timeout when component unmounts or effect reruns
   });
@@ -62,16 +62,16 @@ export const ContactForm = component$(() => {
 
   return (
     <div class="relative col-span-6">
-      <div class="space-y-4 rounded-2xl bg-gray-100 p-6 dark:bg-gray-800/90 mb-4">
+      <div class="space-y-4 rounded-2xl bg-gray-100 p-6 dark:bg-gray-800/90 mb-4 items-center justify-center flex" style={ "height: 378px"}>
 
     {store.showAlert ? (
-      <div class="text-center">
+      <div class="text-center flex flex-col" >
       <div class={`text-6xl ${store.success ? 'text-green-500' : 'text-red-500'}`}>
         {store.success ? '✓' : '✕'}
       </div>
       <p class="text-xl my-4 dark:text-gray-100">{store.result}</p>
       <button onClick$={resetForm} class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded">
-        Volver al formulario
+        Back to form
       </button>
     </div>
     ) : (
