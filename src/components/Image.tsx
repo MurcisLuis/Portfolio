@@ -2,6 +2,7 @@ import ImageLujoEmotes from "~/media/logo-lujoemotes.png?jsx";
 import ImageLujoKarts from "~/media/logo-lujokarts.png?jsx";
 import ImageBasePlugin from "~/media/logo-baseplugin.png?jsx";
 import ImageBlockCounter from "~/media/logo-blockcounter.png?jsx";
+import ImageMurcisLuis from "~/media/logo-murcisluis.png?jsx"
 import ImageAndroid from "~/media/android.svg?jsx"
 import ImageBitBucket from "~/media/bitbucket.svg?jsx"
 import ImageBoostrap from "~/media/boostrap.svg?jsx"
@@ -39,8 +40,13 @@ import ImageVsCode from "~/media/vscode.svg?jsx"
 import ImageBackArrow from "~/media/back-arrow-svgrepo-com.svg?jsx"
 import ImagePlaceholderAPI from "~/media/placeholderAPI.png?jsx"
 import ImageBuiltByBit from "~/media/builbybit.svg?jsx"
+import ImageVite from "~/media/vite.svg?jsx"
+import ImageJQuery from "~/media/jquery.svg?jsx"
 import ImagePolymart from "~/media/PolyMartLight.png?jsx"
 import ImageBungeeCord from "~/media/BungeeCord.png?jsx"
+import ImageMiniMessage from "~/media/minimessage.png?jsx"
+import ImagePurpur from "~/media/purpur.png?jsx"
+import ImageMMOCore from "~/media/mmocore.jpg?jsx"
 
 type ImageComponentMap = {
     [key: string]: any;
@@ -89,7 +95,13 @@ const imagesMap: ImageComponentMap  = {
     placeholderAPI:ImagePlaceholderAPI,
     builtbybit:ImageBuiltByBit,
     polymart:ImagePolymart,
-    bungeecord:ImageBungeeCord
+    bungeecord:ImageBungeeCord,
+    murcisluis:ImageMurcisLuis,
+    minimessage:ImageMiniMessage,
+    vite: ImageVite,
+    jquery: ImageJQuery,
+    purpur: ImagePurpur,
+    mmocore: ImageMMOCore,
   };
   
 
@@ -135,5 +147,11 @@ export {
     ImageVsCode,
     ImageBackArrow,
     ImagePlaceholderAPI,
-    ImageBungeeCord
+    ImageBungeeCord,
+    ImageMurcisLuis,
+    ImageMiniMessage,
+    ImageVite,
+    ImageJQuery,
+    ImagePurpur,
+    ImageMMOCore
 }

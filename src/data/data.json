@@ -19,14 +19,16 @@
         {"name": "Java 17", "icon": "java"},
         {"name": "Gradle", "icon": "gradle"},
         {"name": "Spigot", "icon": "spigot"},
+        {"name": "MiniMessage", "icon": "minimessage"},
+        {"name": "PlaceholderAPI", "icon": "placeholderAPI"},
         {"name": "MythicMobs", "icon": "mythicMobs"},
         {"name": "MySQL", "icon": "mysql"},
         {"name": "MariaDB", "icon": "maria"},
         {"name": "SQLite", "icon": "sqlite"}
       ],
       "links": [
-        {"name": "BuiltByBit", "url": "https://builtbybit.com/resources/lujoemotes.40218/", "icon": "builtbybit","price":19.99},
-        {"name": "Polymart", "url": "https://polymart.org/resource/lujoemotes.5551", "icon": "polymart","price":19.99},
+        {"name": "BuiltByBit", "url": "https://builtbybit.com/resources/lujoemotes.40218/", "icon": "builtbybit","price":14.99},
+        {"name": "Polymart", "url": "https://polymart.org/resource/lujoemotes.5551", "icon": "polymart","price":14.99},
         {"name": "GitBook", "url": "https://murcisluis.gitbook.io/lujoemotes", "icon": "gitbook"},
         {"name": "GitHub Issues", "url": "https://github.com/MurcisLuis/Issues-LujoEmotes", "icon": "github"}
       ]
@@ -70,7 +72,10 @@
         {"name": "Spigot", "icon": "spigot"},
         {"name": "BungeeCord", "icon": "bungeecord"},
         {"name": "PlaceholderAPI", "icon": "placeholderAPI"},
+        {"name": "MiniMessage", "icon": "minimessage"},
         {"name": "Gradle", "icon": "gradle"}
+        
+        
       ],
       "links": [
         {"name": "GitHub", "url": "https://github.com/MurcisLuis/baseplugin", "icon": "github"}
@@ -92,6 +97,54 @@
         {"name": "Download", "url": "https://github.com/MurcisLuis/BlockCounter/releases/tag/1.0", "icon": "github","price":0 },
         {"name": "GitHub", "url": "https://github.com/MurcisLuis/blockcounter", "icon": "github"}
 
+      ]
+    },
+    {
+      "id": "murcisluis",
+      "name": "Murcis Luis Network Web",
+      "image": "logo-murcisluis.png",
+      "description": "Our Minecraft server website is a dynamic and vibrant platform where users can engage with the community through various features. We offer a comprehensive forum system where players can discuss strategies, share experiences, and solve queries. The blogs allow users to express their creativity, post Minecraft-related news, and keep the community updated on server events. Additionally, the site includes a comment section and a like system, facilitating interaction among members and promoting a collaborative and friendly atmosphere. Our website is designed to be the central meeting point for all server fans, providing a rich online experience that complements in-game adventures.",
+      "features": [
+        {
+          "name": "Responsive",
+          "icon": "",
+          "description": "The website is fully responsive, allowing users to access content from any device, whether it's a computer, tablet, or smartphone, ensuring an optimal user experience across all platforms."
+      },
+      {
+          "name": "Blogs System",
+          "icon": "",
+          "description": "Designed for simple and minimalist use and installation, the blog system enables users to easily create and share content, keeping the community informed and engaged."
+      },
+      {
+          "name": "Forum System",
+          "icon": "",
+          "description": "Our forum system offers a straightforward and minimalist platform for players to discuss topics, exchange ideas, and resolve queries, fostering interaction and mutual support within the community."
+      },
+      {
+          "name": "Comments System",
+          "icon": "",
+          "description": "With easy and minimalist configuration and installation, the comments system allows users to interact with content efficiently by sharing opinions and feedback."
+      },
+      {
+          "name": "Updates from Server",
+          "icon": "",
+          "description": "We provide constant and easy-to-manage updates about the server, keeping the community informed about the latest changes, improvements, and events."
+      },
+      {
+          "name": "Design Friendly",
+          "icon": "",
+          "description": "The website features a simple and minimalist design that facilitates use and installation, ensuring users can navigate and find the information they need without complications."
+      }
+      ],
+      "technologies": [
+        {"name": "Qwik", "icon": "qwik"},
+        {"name": "Tailwind css", "icon": "tailwindcss"},
+        {"name": "Firebase", "icon": "firebase"},
+        {"name": "NodeJS", "icon": "node"},
+        {"name": "Vite", "icon": "vite"}
+      ],
+      "links": [
+        {"name": "Web", "url": "https://murcisluis.es", "icon": "murcisluis" }
       ]
     }
   ]

@@ -7,7 +7,7 @@ import { Weather } from "~/components/weather/WeatherComponent";
 import { ContactForm } from "~/components/contactform/ContactMe";
 
 import { ProjectsCards } from "~/components/projects/ProyectsCards";
-import { ImageAndroid, ImageBitBucket, ImageBoostrap, ImageComposer, ImageCss, ImageDocker, ImageFigma, ImageFirebase, ImageGit, ImageGitHub, ImageGradle, ImageHtml, ImageIntellj, ImageJava, ImageMaria, ImageMaven, ImageModelEngine, ImageMysql, ImageMythicMobs, ImageNode, ImageNpm, ImageOracle, ImagePaper, ImagePhp, ImagePipy, ImagePython, ImageQwik, ImageReact, ImageSQLite, ImageSpigot, ImageSymphony, ImageTailwindcss, ImageVsCode } from "~/components/Image";
+import { ImageAndroid, ImageBitBucket, ImageBoostrap, ImageComposer, ImageCss, ImageDocker, ImageFigma, ImageFirebase, ImageGit, ImageGitBook, ImageGitHub, ImageGradle, ImageHtml, ImageIntellj, ImageJQuery, ImageJava, ImageMMOCore, ImageMaria, ImageMaven, ImageMiniMessage, ImageModelEngine, ImageMysql, ImageMythicMobs, ImageNode, ImageNpm, ImageOracle, ImagePaper, ImagePhp, ImagePipy, ImagePlaceholderAPI, ImagePurpur, ImagePython, ImageQwik, ImageReact, ImageSQLite, ImageSpigot, ImageSymphony, ImageTailwindcss, ImageVite, ImageVsCode } from "~/components/Image";
 
 export default component$(() => (
   <>
@@ -39,7 +39,7 @@ export default component$(() => (
             </div>
           </GroupContent>
           <GroupContent colSpan={3} mdColSpan={2} class={'h-full'}>
-            <Link href="https://www.linkedin.com/in/luis-aldea-diez" target="_blank" class='flex h-full items-center justify-center rounded-2xl bg-white text-blue-700 dark:bg-blue-700 dark:text-white text-4xl transform-gpu transition-all duration-500 will-change-[outline,_transform] group-hover:scale-95 active:scale-100'>
+            <Link href="https://www.linkedin.com/in/luis-aldea-diez" aria-label="Linkedin" target="_blank" class='flex h-full items-center justify-center rounded-2xl bg-white text-blue-700 dark:bg-blue-700 dark:text-white text-4xl transform-gpu transition-all duration-500 will-change-[outline,_transform] group-hover:scale-95 active:scale-100'>
               <svg class="w-20 h-20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z" clip-rule="evenodd" />
                 <path d="M7.2 8.8H4v10.7h3.2V8.8Z" />
@@ -73,24 +73,23 @@ export default component$(() => (
           </GroupContent>
           <ProjectsCards/>
           
-          <div class="col-span-6 space-y-2 rounded-2xl bg-yellow-200 p-6 dark:bg-indigo-800 md:col-span-4 grid grid-cols-5 sm:grid-cols-8 md:grid-cols-11 gap-2 items-center">
+          <div class="col-span-6 space-y-2 rounded-2xl bg-yellow-200 p-6 dark:bg-indigo-800 grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2 items-center">
             {/* Específicos de Minecraft */}
-            <div title="Spigot"><ImageSpigot style={{ width: '32px', height: '32px'}} class="mt-2"/></div>
+            <div title="Spigot"><ImageSpigot style={{ width: '32px', height: '32px'}} alt="Spigot" class="mt-2"/></div>
             <div title="Paper"><ImagePaper style={{ width: '32px', height: '32px'}}/></div>
-            <div title="MythicMobs"><ImageMythicMobs style={{ width: '32px', height: '32px'}}/></div>
-            <div title="ModelEngine"><ImageModelEngine style={{ width: '32px', height: '32px'}}/></div>
-
-
+            <div title="Purpur"><ImagePurpur style={{ width: '32px', height: '32px'}} alt="Purpur"/></div>
+            <div title="MythicMobs"><ImageMythicMobs style={{ width: '32px', height: '32px'}} alt="MythicMobs"/></div>
+            <div title="ModelEngine"><ImageModelEngine style={{ width: '32px', height: '32px'}} alt="ModelEngine"/></div>
+            <div title="MMOCore"><ImageMMOCore style={{ width: '32px', height: '32px'}} alt="MMOCore"/></div>
+            <div title="PlaceholderAPI"><ImagePlaceholderAPI style={{ width: '32px', height: '32px'}} alt="PlaceholderAPI"/></div>
+            <div title="Adventure MiniMessage"><ImageMiniMessage style={{ width: '32px', height: '32px'}} alt="Adventure MiniMessage"/></div>
 
             {/* Lenguajes de Programación y Otros */}
-            <div title="Java"><ImageJava style={{ width: '32px', height: '32px'}}/></div>
-            <div title="PHP"><ImagePhp style={{ width: '32px', height: '32px'}}/></div>
-            <div title="Composer"><ImageComposer style={{ width: '32px', height: '32px'}}/></div>
+            <div title="Java 8, Java 17 , Java 21"><ImageJava style={{ width: '32px', height: '32px'}}/></div>
             <div title="BitBucket"><ImageBitBucket style={{ width: '32px', height: '32px'}}/></div>
             <div title="IntelliJ"><ImageIntellj style={{ width: '32px', height: '32px'}}/></div>
             <div title="Visual Studio Code"><ImageVsCode style={{ width: '32px', height: '32px'}}/></div>
-            <div title="Symfony"><ImageSymphony style={{ width: '32px', height: '32px'}}/></div>
-            <div title="Python"><ImagePython style={{ width: '32px', height: '32px'}}/></div>
+            
 
 
             {/* Desarrollo Web */}
@@ -101,6 +100,16 @@ export default component$(() => (
             <div title="Qwik"><ImageQwik style={{ width: '32px', height: '32px'}}/></div>
             <div title="Tailwind CSS"><ImageTailwindcss style={{ width: '32px', height: '32px'}}/></div>
             <div title="Bootstrap"><ImageBoostrap style={{ width: '32px', height: '32px'}}/></div>
+            <div title="Vite"><ImageVite style={{ width: '32px', height: '32px'}}/></div>
+            <div title="JQuery"><ImageJQuery style={{ width: '32px', height: '32px'}}/></div>
+
+
+            {/* Desarrollo Web Back*/}
+            <div title="PHP"><ImagePhp style={{ width: '32px', height: '32px'}}/></div>
+            <div title="Symfony"><ImageSymphony style={{ width: '32px', height: '32px'}}/></div>
+            <div title="Composer"><ImageComposer style={{ width: '32px', height: '32px'}}/></div>
+            <div title="Python"><ImagePython style={{ width: '32px', height: '32px'}}/></div>
+
 
             {/* Bases de Datos */}
             <div title="MySQL"><ImageMysql style={{ width: '32px', height: '32px'}}/></div>
@@ -112,7 +121,7 @@ export default component$(() => (
             {/* Herramientas de Desarrollo */}
             <div title="Git"><ImageGit style={{ width: '32px', height: '32px'}}/></div>
             <div title="GitHub"><ImageGitHub style={{ width: '32px', height: '32px'}}/></div>
-            {/*<div title="GitBook"><ImageGitBook style={{ width: '32px', height: '32px'}}/></div>*/}
+            <div title="GitBook"><ImageGitBook style={{ width: '32px', height: '32px'}}/></div>
             <div title="Docker"><ImageDocker style={{ width: '32px', height: '32px'}}/></div>
             <div title="Gradle"><ImageGradle style={{ width: '32px', height: '32px'}}/></div>
             <div title="Maven"><ImageMaven style={{ width: '32px', height: '32px'}}/></div>
