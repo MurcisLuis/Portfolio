@@ -38,19 +38,23 @@ export default component$(() => {
             <h2 class="text-2xl font-semibold text-gray-800 dark:text-green-100 m-auto">Features</h2>
           </GroupContent>
           {project.value.features.map((feature:any) => (
-          <GroupContent colSpan={3} key={feature.name} class="flex flex-col items-center justify-between overflow-hidden rounded-lg bg-gradient-to-tr from-green-500 to-green-300 p-6 shadow-lg dark:from-green-600 dark:to-green-400 hover:scale-105 transition-transform duration-300 ease-in-out">
-            <div  class="flex items-center justify-center w-full">
-              {/* Icono de la característica, si está disponible */}
-              {feature.icon && imagesMap[feature.icon] (
-                 imagesMap[feature.icon]({ alt: feature.name, width: 200, height: 200, class: "object-contain max-w-full max-h-full w-[200px] h-[200px] p-auto" })
-              )}
-              {/* Si no hay icono, puedes optar por mostrar un placeholder o simplemente omitir este bloque */}
-            </div>
-            <div class="text-center">
-              <h3 class="text-xl font-semibold text-gray-800 dark:text-green-100">{feature.name}</h3>
-              <p class="text-sm text-gray-700 dark:text-green-200">{feature.description}</p>
-            </div>
-          </GroupContent>
+            <GroupContent colSpan={3} key={feature.name} class="flex flex-col items-center justify-between overflow-hidden rounded-lg bg-gradient-to-tr from-green-500 to-green-300 p-6 shadow-lg dark:from-green-600 dark:to-green-400 hover:scale-105 transition-transform duration-300 ease-in-out">
+              <div key={feature.name}  class="flex items-center justify-center w-full">
+                {/* Icono de la característica, si está disponible */}
+                {
+                      imagesMap[feature.icon]
+                      ? imagesMap[feature.icon]({ alt: feature.name, width: 200, height: 200, class: "object-contain max-w-full max-h-full w-[200px] h-[200px] p-auto" })
+                      : <>
+                            
+                        </>
+                    }  
+                {/* Si no hay icono, puedes optar por mostrar un placeholder o simplemente omitir este bloque */}
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-green-100">{feature.name}</h3>
+                <p class="text-sm text-gray-700 dark:text-green-200">{feature.description}</p>
+              </div>
+            </GroupContent>
           ))}
           {/* Technologies section */}
 

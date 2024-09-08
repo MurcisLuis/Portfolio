@@ -136,6 +136,7 @@
           "description": "The website features a simple and minimalist design that facilitates use and installation, ensuring users can navigate and find the information they need without complications."
       }
       ],
+      
       "technologies": [
         {"name": "Qwik", "icon": "qwik"},
         {"name": "Tailwind css", "icon": "tailwindcss"},
@@ -145,6 +146,42 @@
       ],
       "links": [
         {"name": "Web", "url": "https://murcisluis.es", "icon": "murcisluis" }
+      ]
+    },
+    {
+      "id": "mangatracker",
+      "name": "Manga Tracker",
+      "image": "MangaTracker.png",
+      "description": "Extension to chromium navigators to save the progress of the manga/manwhas.",
+      "features": [
+        {
+          "name": "Support multiple pages",
+          "icon": "",
+          "description": "https://leerolymp.com/ , https://manhwaweb.com/ , https://www.leercapitulo.co/ , https://taurusmanga.com/"
+        },
+        {
+          "name": "Multiple Views",
+          "icon": "mangatrackerss",
+          "description": "Change the view in grid or list"
+        },
+        {
+          "name": "Save scroll",
+          "icon": "mangatrackerssss",
+          "description": "Restore the scroll position to read the manga"
+        },
+        {
+          "name": "Auto next Page",
+          "icon": "mangatrackersss",
+          "description": "Restore the scroll position to read the manga"
+        }
+      ],
+      
+      "technologies": [
+        {"name": "JavaScript", "icon": "javascript"}
+      ],
+      "links": [
+        {"name": "Chrome Extension", "url": "https://chromewebstore.google.com/detail/manga-tracker/egdanimkfbfnpijekkoipefppmapkopk?hl=es-419&authuser=0", "icon": "mangatracker" },
+        {"name": "Github", "url": "https://github.com/MurcisLuis/MangaTracker", "icon": "github" }
       ]
     }
   ]

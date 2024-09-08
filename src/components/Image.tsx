@@ -47,7 +47,11 @@ import ImageBungeeCord from "~/media/BungeeCord.png?jsx"
 import ImageMiniMessage from "~/media/minimessage.png?jsx"
 import ImagePurpur from "~/media/purpur.png?jsx"
 import ImageMMOCore from "~/media/mmocore.jpg?jsx"
-
+import ImageMangaTracker from "~/media/MangaTracker.png?jsx"
+import ImageJavaScript from "~/media/javascript.svg?jsx"
+import ImageMangaTrackerSS from "~/media/ss-mangatracker.png?jsx"
+import ImageMangaTrackerSSS from "~/media/sss-mangatracker.png?jsx"
+import ImageMangaTrackerSSSS from "~/media/ssss-mangatracker.png?jsx"
 type ImageComponentMap = {
     [key: string]: any;
 };
@@ -102,6 +106,11 @@ const imagesMap: ImageComponentMap  = {
     jquery: ImageJQuery,
     purpur: ImagePurpur,
     mmocore: ImageMMOCore,
+    mangatracker: ImageMangaTracker,
+    javascript: ImageJavaScript,
+    mangatrackerss: ImageMangaTrackerSS,
+    mangatrackersss: ImageMangaTrackerSSS,
+    mangatrackerssss:ImageMangaTrackerSSSS
   };
   
 
@@ -153,5 +162,10 @@ export {
     ImageVite,
     ImageJQuery,
     ImagePurpur,
-    ImageMMOCore
+    ImageMMOCore,
+    ImageMangaTracker,
+    ImageJavaScript,
+    ImageMangaTrackerSS,
+    ImageMangaTrackerSSS,
+    ImageMangaTrackerSSSS
 }
