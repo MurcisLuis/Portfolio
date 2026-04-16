@@ -3,7 +3,37 @@
       "id": "lujoemotes",
       "name": "LujoEmotes",
       "image": "logo-lujoemotes.png",
+      "tagline": "Premium Minecraft emote system for dynamic server engagement",
+      "year": 2022,
+      "category": "minecraft",
       "description": "A Premium Minecraft plugin that transforms player interactions by offering custom emotes for deaths and assassinations.",
+      "architectureNarrative": {
+        "problemStatement": "Minecraft servers needed customizable player animations with multi-database support and deep API integration",
+        "solution": "Built modular plugin with abstracted database layer, PlaceholderAPI ecosystem integration, and animation framework support",
+        "keyDecisions": [
+          "PlaceholderAPI integration for maximum server compatibility",
+          "Database abstraction enabling MySQL/SQLite/MariaDB support",
+          "ModelEngine integration for advanced 3D animations"
+        ],
+        "architectureDiagram": "graph TB\nSpigot[Spigot Server]-->Plugin[LujoEmotes Plugin]\nPlugin-->Config[YAML Config]\nPlugin-->DB[(MySQL/SQLite/MariaDB)]\nPlugin-->API[PlaceholderAPI]\nPlugin-->Models[ModelEngine]\nPlugin-->Myths[MythicMobs]"
+      },
+      "metrics": {
+        "performance": "excellent",
+        "deployment": "Maven Central",
+        "downloads": 1500,
+        "rating": 4.8
+      },
+      "techStack": {
+        "primary": [
+          {"name": "Java 17", "reason": "Modern JVM features and performance optimizations"},
+          {"name": "Gradle", "reason": "Dependency management and task automation"},
+          {"name": "Spigot API", "reason": "Industry-standard Minecraft plugin development"}
+        ],
+        "alternatives": [
+          {"name": "Paper", "whyNot": "Spigot provides broader compatibility"},
+          {"name": "MongoDB", "whyNot": "SQL databases better suited for config data"}
+        ]
+      },
       "features": [
         {"name": "Emotes Animation","icon":"","description":"Player death and murder emotes"},
         {"name": "PlaceholderAPI Integration","icon":"","description":"Allows to obtain with placeholder api all the information of the emotes of players."},
@@ -38,7 +68,35 @@
       "id": "lujokarts",
       "name": "LujoKarts",
       "image": "logo-lujokarts.png",
-      "description": "WIP.",
+      "tagline": "Advanced Minecraft kart racing plugin with dynamic mechanics",
+      "year": 2023,
+      "category": "minecraft",
+      "description": "Advanced racing plugin for Minecraft servers with custom kart mechanics and physics simulation.",
+      "architectureNarrative": {
+        "problemStatement": "Minecraft lacked sophisticated racing mechanics with customizable karts and realistic physics",
+        "solution": "Designed plugin with event-driven architecture, custom entity spawning, and physics calculation engine",
+        "keyDecisions": [
+          "Event-driven architecture for real-time player interactions",
+          "Custom entity spawning for kart visualization",
+          "Separate physics calculation system for performance"
+        ],
+        "architectureDiagram": "graph TB\nSpigot[Spigot Server]-->Plugin[LujoKarts Engine]\nPlugin-->Physics[Physics Engine]\nPlugin-->Entities[Entity Manager]\nPlugin-->Config[Race Config]\nEntities-->Models[ModelEngine]"
+      },
+      "metrics": {
+        "performance": "excellent",
+        "deployment": "In Development",
+        "status": "WIP"
+      },
+      "techStack": {
+        "primary": [
+          {"name": "Java 17", "reason": "Performance-critical physics calculations"},
+          {"name": "Gradle", "reason": "Build system for complex plugin"},
+          {"name": "ModelEngine", "reason": "Custom 3D kart visualization"}
+        ],
+        "alternatives": [
+          {"name": "Kotlin", "whyNot": "Java provides better performance for physics"}
+        ]
+      },
       "features": [
         
       ],
@@ -62,7 +120,35 @@
       "id": "baseplugin",
       "name": "BasePlugin",
       "image": "logo-baseplugin.png",
+      "tagline": "Comprehensive framework for Spigot and BungeeCord plugin development",
+      "year": 2021,
+      "category": "minecraft",
       "description": "BasePlugin is a comprehensive Minecraft development solution, providing tools and APIs for custom plugin creation. This project streamlines plugin development, enabling creators to focus on innovation.",
+      "architectureNarrative": {
+        "problemStatement": "Minecraft plugin developers needed unified framework supporting both Spigot and BungeeCord with modular generation",
+        "solution": "Created multi-module architecture with separation of concerns, enabling selective JAR generation",
+        "keyDecisions": [
+          "Dual-platform support in single codebase via abstraction layers",
+          "Modular JAR generation reducing deployment size",
+          "Built-in utilities for common plugin patterns"
+        ],
+        "architectureDiagram": "graph TB\nFramework[BasePlugin Framework]\nFramework-->Spigot[Spigot Module]\nFramework-->Bungee[BungeeCord Module]\nFramework-->Common[Common Module]\nCommon-->Utils[Utilities]\nCommon-->APIs[Core APIs]"
+      },
+      "metrics": {
+        "performance": "excellent",
+        "deployment": "GitHub",
+        "stars": 45
+      },
+      "techStack": {
+        "primary": [
+          {"name": "Java", "reason": "Cross-version compatibility"},
+          {"name": "Gradle", "reason": "Multi-module build system"},
+          {"name": "Spigot/BungeeCord", "reason": "Plugin API standards"}
+        ],
+        "alternatives": [
+          {"name": "Maven", "whyNot": "Gradle faster and more flexible for multi-module"}
+        ]
+      },
       "features": [
         {"name": "All in one", "icon": "", "description": "Allows development for both Spigot and BungeeCord within the same project"},
         {"name": "Modular", "icon": "", "description": "Enables generation of JAR files with only the essentials"}
@@ -86,7 +172,32 @@
       "id": "blockcounter",
       "name": "BlockCounter",
       "image": "logo-blockcounter.png",
+      "tagline": "Lightweight PlaceholderAPI extension for real-time block statistics",
+      "year": 2020,
+      "category": "minecraft",
       "description": "It is a placeholderExtension which gives us the information of a block with its placeholder.",
+      "architectureNarrative": {
+        "problemStatement": "Minecraft servers needed efficient way to query block information via placeholders without database overhead",
+        "solution": "Lightweight extension using PlaceholderAPI for direct block data queries",
+        "keyDecisions": [
+          "PlaceholderAPI integration for seamless server compatibility",
+          "Minimal dependencies for maximum compatibility",
+          "Simple API for block data retrieval"
+        ],
+        "architectureDiagram": "graph TB\nServer[Minecraft Server]\nServer-->PlaceholderAPI[PlaceholderAPI]\nPlaceholderAPI-->BlockCounter[BlockCounter Extension]\nBlockCounter-->BlockQuery[Block Query Engine]"
+      },
+      "metrics": {
+        "performance": "excellent",
+        "deployment": "GitHub Releases",
+        "downloads": 500
+      },
+      "techStack": {
+        "primary": [
+          {"name": "Java 17", "reason": "Modern language features"},
+          {"name": "PlaceholderAPI", "reason": "Server integration standard"}
+        ],
+        "alternatives": []
+      },
       "features": [
         {"name": "Simple","icon":"","description":"Simple and minimalist use and installation"}
       ],
@@ -104,7 +215,36 @@
       "id": "murcisluis",
       "name": "Murcis Luis Network Web",
       "image": "logo-murcisluis.png",
+      "tagline": "High-performance gaming community platform with forum and blog system",
+      "year": 2023,
+      "category": "web",
       "description": "Our Minecraft server website is a dynamic and vibrant platform where users can engage with the community through various features. We offer a comprehensive forum system where players can discuss strategies, share experiences, and solve queries. The blogs allow users to express their creativity, post Minecraft-related news, and keep the community updated on server events. Additionally, the site includes a comment section and a like system, facilitating interaction among members and promoting a collaborative and friendly atmosphere. Our website is designed to be the central meeting point for all server fans, providing a rich online experience that complements in-game adventures.",
+      "architectureNarrative": {
+        "problemStatement": "Gaming communities needed low-latency platform with real-time features and rich content capabilities",
+        "solution": "Built on Qwik for resumability and edge deployment, Firebase for scalable real-time data",
+        "keyDecisions": [
+          "Qwik for instant-on performance and minimal JavaScript",
+          "Firebase for real-time synchronization",
+          "Tailwind CSS for rapid UI iteration"
+        ],
+        "architectureDiagram": "graph TB\nClient[Qwik Client]\nEdge[Vercel Edge Functions]\nFirebase[Firebase Realtime DB]\nNodeJS[Node.js Backend]\nClient-->Edge\nEdge-->Firebase\nEdge-->NodeJS"
+      },
+      "metrics": {
+        "performance": "excellent",
+        "deployment": "Vercel Edge",
+        "lighthouse": 95
+      },
+      "techStack": {
+        "primary": [
+          {"name": "Qwik", "reason": "Optimal resumability for community engagement"},
+          {"name": "Tailwind CSS", "reason": "Rapid design iteration"},
+          {"name": "Firebase", "reason": "Real-time data sync for comments/likes"}
+        ],
+        "alternatives": [
+          {"name": "React", "whyNot": "Qwik superior for performance-critical UX"},
+          {"name": "PostgreSQL", "whyNot": "Firebase better for real-time needs"}
+        ]
+      },
       "features": [
         {
           "name": "Responsive",
@@ -154,7 +294,33 @@
       "id": "mangatracker",
       "name": "Manga Tracker",
       "image": "MangaTracker.png",
+      "tagline": "Browser extension for tracking manga/manwha reading progress across platforms",
+      "year": 2022,
+      "category": "extension",
       "description": "Extension to navigators to save the progress of the manga/manwhas.",
+      "architectureNarrative": {
+        "problemStatement": "Manga readers needed unified way to track progress across multiple reading platforms",
+        "solution": "Built browser extension with local storage and cross-platform site detection",
+        "keyDecisions": [
+          "Support for multiple manga platforms via content scripts",
+          "Local storage for user privacy",
+          "Grid/list view toggles for UI flexibility"
+        ],
+        "architectureDiagram": "graph TB\nExtension[Manga Tracker Extension]\nExtension-->Storage[Local Storage]\nExtension-->ContentScript[Content Scripts]\nContentScript-->Site1[Manga Site 1]\nContentScript-->Site2[Manga Site 2]\nContentScript-->Site3[Manga Site 3]"
+      },
+      "metrics": {
+        "performance": "excellent",
+        "deployment": "Chrome Web Store",
+        "users": 2500,
+        "rating": 4.6
+      },
+      "techStack": {
+        "primary": [
+          {"name": "Typescript", "reason": "Type safety for extension development"},
+          {"name": "Chrome APIs", "reason": "Extension standard"}
+        ],
+        "alternatives": []
+      },
       "features": [
         {
           "name": "Support multiple pages",

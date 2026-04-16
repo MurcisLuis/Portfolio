@@ -2,6 +2,8 @@ import { component$ } from "@builder.io/qwik";
 import { type DocumentHead, Link, routeLoader$ } from "@builder.io/qwik-city";
 import imagesMap, { ImageBackArrow } from "~/components/Image";
 import { GroupContent } from "~/components/content/GroupContent";
+import { ArchitectureDiagram } from "~/components/architecture/ArchitectureDiagram";
+import { PerformanceMetrics } from "~/components/projects/PerformanceMetrics";
 
 import projects from "~/data/data.json";
 
@@ -14,8 +16,6 @@ export const useProjectInfo = routeLoader$<any>(
     return project;
   }
 );
-
-// ... imports previos permanecen iguales
 
 export default component$(() => {
   const project = useProjectInfo();
@@ -49,15 +49,15 @@ export default component$(() => {
                   <Link
                     href={link.url}
                     target="_blank"
-                    class={`flex flex-col items-center justify-center h-full p-4 rounded-xl transition-all duration-200 
+                    class={`flex flex-col items-center justify-center h-full p-4 rounded-xl transition-all duration-200
                       border ${
-                        link.price > 0 
+                        link.price > 0
                           ? 'border-amber-500/30 hover:border-amber-400/50 bg-amber-900/20 hover:bg-amber-800/30'
                           : 'border-emerald-500/30 hover:border-emerald-400/50 bg-emerald-900/20 hover:bg-emerald-800/30'
                       }`}
                   >
                     <div class="flex flex-col items-center justify-center flex-1 w-full">
-                      {imagesMap[link.icon] && 
+                      {imagesMap[link.icon] &&
                         imagesMap[link.icon]({
                           alt: link.name,
                           class: "w-16 h-16 mb-4 object-contain filter brightness-125"
@@ -86,6 +86,51 @@ export default component$(() => {
             <h2 class="text-2xl font-bold text-slate-100 mb-4">Project Overview</h2>
             <p class="text-slate-300 text-lg leading-relaxed">{project.value.description}</p>
           </GroupContent>
+
+          {/* Architecture Narrative */}
+          {project.value.architectureNarrative && (
+            <>
+              <GroupContent colSpan={6} class="rounded-2xl bg-slate-800/90 backdrop-blur-sm border border-slate-700/50">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                  <div>
+                    <h4 class="text-xs font-bold text-red-400 mb-2 uppercase tracking-wider">The Problem</h4>
+                    <p class="text-sm text-slate-300">{project.value.architectureNarrative.problemStatement}</p>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-green-400 mb-2 uppercase tracking-wider">The Solution</h4>
+                    <p class="text-sm text-slate-300">{project.value.architectureNarrative.solution}</p>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-purple-400 mb-2 uppercase tracking-wider">Key Decisions</h4>
+                    <ul class="space-y-1">
+                      {project.value.architectureNarrative.keyDecisions.map((decision: string, i: number) => (
+                        <li key={i} class="text-xs text-slate-400 flex gap-2">
+                          <span class="text-purple-400 font-mono">{String(i + 1).padStart(2, '0')}</span>
+                          <span>{decision}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </GroupContent>
+
+              {project.value.architectureNarrative.architectureDiagram && (
+                <GroupContent colSpan={6} class="overflow-hidden rounded-2xl">
+                  <ArchitectureDiagram
+                    diagram={project.value.architectureNarrative.architectureDiagram}
+                    title={`${project.value.name} Architecture`}
+                  />
+                </GroupContent>
+              )}
+            </>
+          )}
+
+          {/* Performance Metrics */}
+          {project.value.metrics && (
+            <GroupContent colSpan={6} class="overflow-hidden rounded-2xl">
+              <PerformanceMetrics metrics={project.value.metrics} />
+            </GroupContent>
+          )}
 
           {/* Sección de Características */}
           <GroupContent colSpan={6} class="rounded-2xl bg-slate-800/90 backdrop-blur-sm border border-slate-700/50">

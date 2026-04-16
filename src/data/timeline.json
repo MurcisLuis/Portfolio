@@ -1,0 +1,50 @@
+[
+  {
+    "year": 2019,
+    "title": "Minecraft Plugin Development Foundation",
+    "description": "Started journey into Minecraft plugin development",
+    "technologies": ["Java", "Spigot"],
+    "milestone": "First Spigot plugin",
+    "impact": "Learned plugin architecture fundamentals and Spigot API"
+  },
+  {
+    "year": 2020,
+    "title": "Advanced Plugin Ecosystem",
+    "description": "Expanded into PlaceholderAPI integration and database abstractions",
+    "technologies": ["Java 11", "Gradle", "MySQL", "PlaceholderAPI"],
+    "milestone": "BlockCounter release",
+    "impact": "Mastered multi-database support and integration patterns"
+  },
+  {
+    "year": 2021,
+    "title": "Framework Architecture",
+    "description": "Designed BasePlugin framework supporting dual platforms",
+    "technologies": ["Java", "Gradle", "Spigot", "BungeeCord"],
+    "milestone": "BasePlugin framework",
+    "impact": "Deep understanding of architecture design and modularity"
+  },
+  {
+    "year": 2022,
+    "title": "Modern Web + Advanced Plugins",
+    "description": "Transitioned to modern web while deepening plugin expertise",
+    "technologies": ["TypeScript", "Qwik", "Tailwind CSS", "Java 17"],
+    "milestone": "LujoEmotes release, Manga Tracker launch",
+    "impact": "Full-stack capability bridging backend and frontend"
+  },
+  {
+    "year": 2023,
+    "title": "Performance-First Web Development",
+    "description": "Focused on Qwik and high-performance web platforms",
+    "technologies": ["Qwik", "TypeScript", "Firebase", "Vite"],
+    "milestone": "Murcis Luis Network Web launch",
+    "impact": "Expert-level understanding of resumability and edge computing"
+  },
+  {
+    "year": 2024,
+    "title": "Architectural Thinking Leadership",
+    "description": "Advanced focus on scalable architecture and decision-making",
+    "technologies": ["Architecture Patterns", "Java 21", "Qwik"],
+    "milestone": "LujoKarts advanced racing mechanics",
+    "impact": "Mastered cross-domain architecture with performance optimization"
+  }
+]

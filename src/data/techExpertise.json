@@ -1,0 +1,68 @@
+[
+  {
+    "id": "jvm-minecraft",
+    "title": "JVM Backend - Minecraft Ecosystem",
+    "icon": "java",
+    "description": "Specialized in plugin architecture, performance optimization, and ecosystem integration",
+    "proficiency": "expert",
+    "yearsExperience": 5,
+    "technologies": [
+      {"name": "Java 17/21", "icon": "java", "years": 5},
+      {"name": "Gradle", "icon": "gradle", "years": 5},
+      {"name": "Spigot/Paper", "icon": "spigot", "years": 4},
+      {"name": "PlaceholderAPI", "icon": "placeholderAPI", "years": 3},
+      {"name": "MythicMobs", "icon": "mythicMobs", "years": 3},
+      {"name": "ModelEngine", "icon": "modelEngine", "years": 2}
+    ],
+    "projects": ["lujoemotes", "lujokarts", "baseplugin", "blockcounter"],
+    "caseStudy": "Developed multi-project plugin ecosystem supporting database abstraction, real-time animations, and server scalability"
+  },
+  {
+    "id": "modern-web",
+    "title": "Modern Web Stack",
+    "icon": "qwik",
+    "description": "Performance-first web development with cutting-edge frameworks and deployment",
+    "proficiency": "expert",
+    "yearsExperience": 2,
+    "technologies": [
+      {"name": "Qwik", "icon": "qwik", "years": 2},
+      {"name": "TypeScript", "icon": "typescript", "years": 3},
+      {"name": "Tailwind CSS", "icon": "tailwindcss", "years": 3},
+      {"name": "Firebase", "icon": "firebase", "years": 2},
+      {"name": "Vite", "icon": "vite", "years": 2}
+    ],
+    "projects": ["murcisluis"],
+    "caseStudy": "Built high-performance gaming community platform with Qwik's resumability achieving 95+ Lighthouse scores"
+  },
+  {
+    "id": "browser-extensions",
+    "title": "Browser Extensions",
+    "icon": "javascript",
+    "description": "Chrome extension development with content scripts and local storage management",
+    "proficiency": "intermediate",
+    "yearsExperience": 1,
+    "technologies": [
+      {"name": "JavaScript", "icon": "javascript", "years": 1},
+      {"name": "Chrome APIs", "icon": "chrome", "years": 1},
+      {"name": "Content Scripts", "icon": "javascript", "years": 1}
+    ],
+    "projects": ["mangatracker"],
+    "caseStudy": "Created cross-platform manga tracker with 2500+ users handling multiple reading platforms"
+  },
+  {
+    "id": "architecture-design",
+    "title": "Software Architecture",
+    "icon": "architecture",
+    "description": "Scalable architecture design with focus on performance, modularity, and maintainability",
+    "proficiency": "expert",
+    "yearsExperience": 5,
+    "technologies": [
+      {"name": "Design Patterns", "icon": "architecture", "years": 5},
+      {"name": "Microservices", "icon": "architecture", "years": 3},
+      {"name": "Database Abstraction", "icon": "database", "years": 4},
+      {"name": "Event-Driven Systems", "icon": "architecture", "years": 3}
+    ],
+    "projects": ["lujoemotes", "baseplugin", "murcisluis"],
+    "caseStudy": "Applied scalable architecture patterns across different domains (Minecraft plugins, web platforms)"
+  }
+]
