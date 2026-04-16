@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik';
-import { Image } from '../Image';
 
 export const Footer = component$(() => {
   const currentYear = new Date().getFullYear();

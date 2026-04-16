@@ -11,6 +11,7 @@ export const ScrollReveal = component$<ScrollRevealProps>(
     const elementRef = useSignal<HTMLDivElement>();
     const isVisible = useSignal(false);
 
+    // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(() => {
       if (!elementRef.value) return;
 

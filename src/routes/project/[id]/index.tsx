@@ -2,6 +2,8 @@ import { component$ } from "@builder.io/qwik";
 import { type DocumentHead, Link, routeLoader$ } from "@builder.io/qwik-city";
 import imagesMap, { ImageBackArrow } from "~/components/Image";
 import { GroupContent } from "~/components/content/GroupContent";
+import { ArchitectureDiagram } from "~/components/architecture/ArchitectureDiagram";
+import { PerformanceMetrics } from "~/components/projects/PerformanceMetrics";
 
 import projects from "~/data/data.json";
 
@@ -33,6 +35,53 @@ export default component$(() => {
           <GroupContent colSpan={6} class="flex flex-col md:flex-row h-auto md:h-52  justify-center overflow-hidden rounded-2xl bg-pink-200 px-8 py-auto dark:border-pink-500 dark:bg-pink-500/25 dark:shadow-none dark:backdrop-blur-2xl">
               <p class="text-md text-pink-900 dark:text-pink-300 m-auto">{project.value.description}</p>
           </GroupContent>
+
+          {/* Architecture Narrative Section */}
+          {project.value.architectureNarrative && (
+            <>
+              <GroupContent colSpan={6} class="overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-800 p-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                  <div>
+                    <h4 class="text-xs font-bold text-red-600 dark:text-red-400 mb-2 uppercase tracking-wider">The Problem</h4>
+                    <p class="text-sm text-slate-700 dark:text-slate-300">{project.value.architectureNarrative.problemStatement}</p>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wider">The Solution</h4>
+                    <p class="text-sm text-slate-700 dark:text-slate-300">{project.value.architectureNarrative.solution}</p>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-tech-primary mb-2 uppercase tracking-wider">Key Decisions</h4>
+                    <ul class="space-y-1">
+                      {project.value.architectureNarrative.keyDecisions.map((decision: string, i: number) => (
+                        <li key={i} class="text-xs text-slate-600 dark:text-slate-400 flex gap-2">
+                          <span class="text-tech-primary font-mono">{String(i + 1).padStart(2, '0')}</span>
+                          <span>{decision}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </GroupContent>
+
+              {/* Architecture Diagram */}
+              {project.value.architectureNarrative.architectureDiagram && (
+                <GroupContent colSpan={6} class="overflow-hidden rounded-2xl">
+                  <ArchitectureDiagram
+                    diagram={project.value.architectureNarrative.architectureDiagram}
+                    title={`${project.value.name} Architecture`}
+                  />
+                </GroupContent>
+              )}
+            </>
+          )}
+
+          {/* Performance Metrics */}
+          {project.value.metrics && (
+            <GroupContent colSpan={6} class="overflow-hidden rounded-2xl">
+              <PerformanceMetrics metrics={project.value.metrics} />
+            </GroupContent>
+          )}
+
           {/* Features section */}
           <GroupContent colSpan={6} class="flex flex-col items-center justify-between overflow-hidden rounded-lg bg-gradient-to-tr from-green-500 to-green-300 p-6 shadow-lg dark:from-green-600 dark:to-green-400">
             <h2 class="text-2xl font-semibold text-gray-800 dark:text-green-100 m-auto">Features</h2>

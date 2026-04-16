@@ -12,6 +12,7 @@ export const AnimatedCounter = component$<AnimatedCounterProps>(
     const displayValue = useSignal(0);
     const elementRef = useSignal<HTMLDivElement>();
 
+    // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(() => {
       if (!elementRef.value) return;
 
