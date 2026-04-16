@@ -5,9 +5,23 @@ import { GroupContent } from "~/components/content/GroupContent";
 import { Countdown } from "~/components/countdown/CountdownComponent";
 import { Weather } from "~/components/weather/WeatherComponent";
 import { ContactForm } from "~/components/contactform/ContactMe";
+import { TechStackCategory } from "~/components/tech/TechStackCategory";
+import { TechDecisionCard } from "~/components/tech/TechDecisionCard";
+import { ArchitecturalThinking } from "~/components/architecture/ArchitecturalThinking";
+import { TechTimeline } from "~/components/timeline/TechTimeline";
+import { Footer } from "~/components/footer/Footer";
 
 import { ProjectsCards } from "~/components/projects/ProyectsCards";
 import { ImageAndroid, ImageBitBucket, ImageBoostrap, ImageComposer, ImageCss, ImageDocker, ImageFigma, ImageFirebase, ImageGit, ImageGitBook, ImageGitHub, ImageGradle, ImageHtml, ImageIntellj, ImageJQuery, ImageJava, ImageMMOCore, ImageMaria, ImageMaven, ImageMiniMessage, ImageModelEngine, ImageMysql, ImageMythicMobs, ImageNode, ImageNpm, ImageOracle, ImagePaper, ImagePhp, ImagePipy, ImagePlaceholderAPI, ImagePurpur, ImagePython, ImageQwik, ImageReact, ImageSQLite, ImageSpigot, ImageSymphony, ImageTailwindcss, ImageVite, ImageVsCode } from "~/components/Image";
+
+import techExpertise from "~/data/techExpertise.json";
+import techDecisions from "~/data/techDecisions.json";
+import projects from "~/data/data.json";
+
+type ProficiencyLevel = 'expert' | 'advanced' | 'intermediate';
+
+const featuredProjectIds = ['lujoemotes', 'murcisluis', 'baseplugin'];
+const featuredDecisions = ['Qwik', 'Java 17/21', 'Gradle'];
 
 export default component$(() => (
   <>
@@ -72,7 +86,117 @@ export default component$(() => (
             </Link>
           </GroupContent>
           <ProjectsCards/>
-          
+
+          {/* Section Divider: Technical Expertise */}
+          <GroupContent colSpan={6} class="h-auto">
+            <div class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-tech-primary/20 to-tech-secondary/20 border border-tech-primary/30">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono text-tech-accent">// expertise</span>
+                <h2 class="text-lg md:text-xl font-bold text-white">
+                  Technical Expertise
+                </h2>
+              </div>
+              <p class="text-xs text-slate-300 mt-1">
+                Specialized areas with project-backed experience
+              </p>
+            </div>
+          </GroupContent>
+
+          {/* Tech Stack Categories */}
+          {techExpertise.map((category) => (
+            <TechStackCategory
+              key={category.id}
+              id={category.id}
+              title={category.title}
+              description={category.description}
+              proficiency={category.proficiency as ProficiencyLevel}
+              yearsExperience={category.yearsExperience}
+              technologies={category.technologies}
+              caseStudy={category.caseStudy}
+              colSpan={6}
+              mdColSpan={3}
+            />
+          ))}
+
+          {/* Section Divider: Architectural Thinking */}
+          <GroupContent colSpan={6} class="h-auto">
+            <div class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-tech-secondary/20 to-tech-accent/20 border border-tech-secondary/30">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono text-tech-accent">// thinking</span>
+                <h2 class="text-lg md:text-xl font-bold text-white">
+                  Architectural Thinking
+                </h2>
+              </div>
+              <p class="text-xs text-slate-300 mt-1">
+                How I approach technical problems: problem → solution → decisions
+              </p>
+            </div>
+          </GroupContent>
+
+          {/* Featured Project Case Studies */}
+          {projects
+            .filter((p) => featuredProjectIds.includes(p.id))
+            .map((project) => (
+              <ArchitecturalThinking
+                key={project.id}
+                projectName={project.name}
+                problemStatement={project.architectureNarrative.problemStatement}
+                solution={project.architectureNarrative.solution}
+                keyDecisions={project.architectureNarrative.keyDecisions}
+                colSpan={6}
+                mdColSpan={2}
+              />
+            ))}
+
+          {/* Technical Timeline */}
+          <TechTimeline />
+
+          {/* Section Divider: Tech Decisions */}
+          <GroupContent colSpan={6} class="h-auto">
+            <div class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-tech-accent/20 to-tech-primary/20 border border-tech-accent/30">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono text-tech-accent">// decisions</span>
+                <h2 class="text-lg md:text-xl font-bold text-white">
+                  Why These Technologies?
+                </h2>
+              </div>
+              <p class="text-xs text-slate-300 mt-1">
+                Intentional choices that shape my work
+              </p>
+            </div>
+          </GroupContent>
+
+          {/* Tech Decision Cards */}
+          {techDecisions
+            .filter((d) => featuredDecisions.includes(d.technology))
+            .map((decision) => (
+              <TechDecisionCard
+                key={decision.technology}
+                technology={decision.technology}
+                context={decision.context}
+                advantages={decision.advantages}
+                tradeoffs={decision.tradeoffs}
+                whyChosen={decision.whyChosen}
+                colSpan={6}
+                mdColSpan={2}
+              />
+            ))}
+
+          {/* Skills Grid Section Header */}
+          <GroupContent colSpan={6} class="h-auto">
+            <div class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/30">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono text-tech-accent">// toolbox</span>
+                <h2 class="text-lg md:text-xl font-bold text-white">
+                  Complete Tech Arsenal
+                </h2>
+              </div>
+              <p class="text-xs text-slate-300 mt-1">
+                Every tool I've worked with across domains
+              </p>
+            </div>
+          </GroupContent>
+
           <div class="col-span-6 space-y-2 rounded-2xl bg-yellow-200 p-6 dark:bg-indigo-800 grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2 items-center">
             {/* Específicos de Minecraft */}
             <div title="Spigot"><ImageSpigot style={{ width: '32px', height: '32px'}} alt="Spigot" class="mt-2"/></div>
@@ -138,6 +262,7 @@ export default component$(() => (
           </div>
           <ContactForm/>
         </main>
+        <Footer />
       </div>
 
     </div>
