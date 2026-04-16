@@ -7,7 +7,7 @@ import { Weather } from "~/components/weather/WeatherComponent";
 import { ContactForm } from "~/components/contactform/ContactMe";
 
 import { ProjectsCards } from "~/components/projects/ProyectsCards";
-import { ImageAndroid, ImageBitBucket, ImageBoostrap, ImageComposer, ImageCss, ImageDocker, ImageFigma, ImageFirebase, ImageGit, ImageGitBook, ImageGitHub, ImageGradle, ImageHtml, ImageIntellj, ImageJQuery, ImageJava, ImageMMOCore, ImageMaria, ImageMaven, ImageMiniMessage, ImageModelEngine, ImageMysql, ImageMythicMobs, ImageNode, ImageNpm, ImageOracle, ImagePaper, ImagePhp, ImagePipy, ImagePlaceholderAPI, ImagePurpur, ImagePython, ImageQwik, ImageReact, ImageSQLite, ImageSpigot, ImageSymphony, ImageTailwindcss, ImageVite, ImageVsCode } from "~/components/Image";
+import { ImageAndroid, ImageBitBucket, ImageBoostrap, ImageComposer, ImageCss, ImageDocker, ImageFigma, ImageFirebase, ImageGit, ImageGitBook, ImageGitHub, ImageGradle, ImageHtml, ImageIntellj, ImageJava, ImageMMOCore, ImageMaria, ImageMaven, ImageMiniMessage, ImageModelEngine, ImageMysql, ImageMythicMobs, ImageNode, ImageNpm, ImageOracle, ImagePaper, ImagePhp, ImagePipy, ImagePlaceholderAPI, ImagePurpur, ImagePython, ImageQwik, ImageReact, ImageSQLite, ImageSpigot, ImageSymphony, ImageTailwindcss, ImageTypescript, ImageVite, ImageVsCode } from "~/components/Image";
 
 export default component$(() => (
   <>
@@ -88,6 +88,7 @@ export default component$(() => (
             <div title="Java 8, Java 17 , Java 21"><ImageJava style={{ width: '32px', height: '32px'}}/></div>
             <div title="BitBucket"><ImageBitBucket style={{ width: '32px', height: '32px'}}/></div>
             <div title="IntelliJ"><ImageIntellj style={{ width: '32px', height: '32px'}}/></div>
+            <div title="Android"><ImageAndroid style={{ width: '32px', height: '32px'}}/></div>
             <div title="Visual Studio Code"><ImageVsCode style={{ width: '32px', height: '32px'}}/></div>
             
 
@@ -101,7 +102,7 @@ export default component$(() => (
             <div title="Tailwind CSS"><ImageTailwindcss style={{ width: '32px', height: '32px'}}/></div>
             <div title="Bootstrap"><ImageBoostrap style={{ width: '32px', height: '32px'}}/></div>
             <div title="Vite"><ImageVite style={{ width: '32px', height: '32px'}}/></div>
-            <div title="JQuery"><ImageJQuery style={{ width: '32px', height: '32px'}}/></div>
+            <div title="Typescript"><ImageTypescript style={{ width: '32px', height: '32px'}}/></div>
 
 
             {/* Desarrollo Web Back*/}
@@ -130,7 +131,6 @@ export default component$(() => (
 
             {/* Herramientas de Diseño */}
             <div title="Figma"><ImageFigma style={{ width: '32px', height: '32px'}}/></div>
-            <div title="Android"><ImageAndroid style={{ width: '32px', height: '32px'}}/></div> {/* Asumiendo que Android representa diseño móvil */}
 
             
 

@@ -22,6 +22,7 @@
         {"name": "MiniMessage", "icon": "minimessage"},
         {"name": "PlaceholderAPI", "icon": "placeholderAPI"},
         {"name": "MythicMobs", "icon": "mythicMobs"},
+        {"name": "Model Engine 4", "icon": "modelEngine"},
         {"name": "MySQL", "icon": "mysql"},
         {"name": "MariaDB", "icon": "maria"},
         {"name": "SQLite", "icon": "sqlite"}
@@ -142,6 +143,7 @@
         {"name": "Tailwind css", "icon": "tailwindcss"},
         {"name": "Firebase", "icon": "firebase"},
         {"name": "NodeJS", "icon": "node"},
+        {"name": "Typescript", "icon": "typescript"},
         {"name": "Vite", "icon": "vite"}
       ],
       "links": [
@@ -152,12 +154,12 @@
       "id": "mangatracker",
       "name": "Manga Tracker",
       "image": "MangaTracker.png",
-      "description": "Extension to chromium navigators to save the progress of the manga/manwhas.",
+      "description": "Extension to navigators to save the progress of the manga/manwhas.",
       "features": [
         {
           "name": "Support multiple pages",
           "icon": "",
-          "description": "https://leerolymp.com/ , https://manhwaweb.com/ , https://www.leercapitulo.co/ , https://taurusmanga.com/"
+          "description": "https://zonaolympus.com/ , https://www.leercapitulo.co/ , https://taurusmanga.com/"
         },
         {
           "name": "Multiple Views",
@@ -177,10 +179,11 @@
       ],
       
       "technologies": [
-        {"name": "JavaScript", "icon": "javascript"}
+        {"name": "Typescript", "icon": "typescript"}
       ],
       "links": [
-        {"name": "Chrome Extension", "url": "https://chromewebstore.google.com/detail/manga-tracker/egdanimkfbfnpijekkoipefppmapkopk?hl=es-419&authuser=0", "icon": "mangatracker" },
+        {"name": "Chrome / Opera / Egde Extension", "url": "https://chromewebstore.google.com/detail/manga-tracker/egdanimkfbfnpijekkoipefppmapkopk?hl=es-419&authuser=0", "icon": "mangatracker" },
+        {"name": "Firefox Extension", "url": "https://addons.mozilla.org/es/firefox/addon/manga-tracker/", "icon": "mangatracker" },
         {"name": "Github", "url": "https://github.com/MurcisLuis/MangaTracker", "icon": "github" }
       ]
     }

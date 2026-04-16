@@ -42,6 +42,7 @@ import ImagePlaceholderAPI from "~/media/placeholderAPI.png?jsx"
 import ImageBuiltByBit from "~/media/builbybit.svg?jsx"
 import ImageVite from "~/media/vite.svg?jsx"
 import ImageJQuery from "~/media/jquery.svg?jsx"
+import ImageTypescript from "~/media/typescript.svg?jsx"
 import ImagePolymart from "~/media/PolyMartLight.png?jsx"
 import ImageBungeeCord from "~/media/BungeeCord.png?jsx"
 import ImageMiniMessage from "~/media/minimessage.png?jsx"
@@ -96,6 +97,7 @@ const imagesMap: ImageComponentMap  = {
     symphony: ImageSymphony,
     tailwindcss: ImageTailwindcss,
     vscode: ImageVsCode,
+    typescript: ImageTypescript,
     placeholderAPI:ImagePlaceholderAPI,
     builtbybit:ImageBuiltByBit,
     polymart:ImagePolymart,
@@ -167,5 +169,6 @@ export {
     ImageJavaScript,
     ImageMangaTrackerSS,
     ImageMangaTrackerSSS,
-    ImageMangaTrackerSSSS
+    ImageMangaTrackerSSSS,
+    ImageTypescript
 }

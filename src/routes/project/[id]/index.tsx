@@ -15,98 +15,127 @@ export const useProjectInfo = routeLoader$<any>(
   }
 );
 
+// ... imports previos permanecen iguales
+
 export default component$(() => {
-  const project=useProjectInfo();
+  const project = useProjectInfo();
   return (
-    <div class="min-h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-purple-900 to-slate-900">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div class="space-y-6">
         <main class="mx-auto grid max-w-3xl grid-cols-6 gap-6 px-6 py-16">
-          <GroupContent colSpan={6} mdColSpan={6} class="flex flex-col md:flex-row h-auto md:h-52  justify-center overflow-hidden rounded-2xl bg-pink-200 px-8 py-auto dark:border-pink-500 dark:bg-pink-500/25 dark:shadow-none dark:backdrop-blur-2xl">
+          {/* Sección de Header */}
+          <GroupContent colSpan={6} class="flex flex-col md:flex-row h-auto items-center justify-between rounded-2xl bg-gradient-to-tr from-purple-800/90 to-purple-600/90 backdrop-blur-sm border border-purple-900/50 px-2">
+            <Link href="/" class="flex items-center gap-2 text-purple-200 hover:text-purple-100 transition-colors">
+              <ImageBackArrow class="w-6 h-6 fill-current" />
+              <span class="text-lg">Back to Portfolio</span>
+            </Link>
+            <div class="mt-4 md:mt-0">
+              {imagesMap[project.value.id] &&
+                imagesMap[project.value.id]({
+                  alt: project.value.id,
+                  width: 100,
+                  height: 100,
+                  class: "w-24 h-24 md:w-32 md:h-32 object-contain filter drop-shadow-lg"
+                })}
+            </div>
+          </GroupContent>
 
-              {
-                imagesMap[project.value.id]
-                  ? imagesMap[project.value.id]({ alt: project.value.id, width: 200, height: 200, class: "w-auto h-auto m-4" })
-                  : <div class="w-auto h-auto mx-auto md:mx-0 "><span class="my-auto">Icono no disponible</span></div>
-              }
-          </GroupContent>
-          {/* Description section */}
-          <GroupContent colSpan={6} class="flex flex-col md:flex-row h-auto md:h-52  justify-center overflow-hidden rounded-2xl bg-pink-200 px-8 py-auto dark:border-pink-500 dark:bg-pink-500/25 dark:shadow-none dark:backdrop-blur-2xl">
-              <p class="text-md text-pink-900 dark:text-pink-300 m-auto">{project.value.description}</p>
-          </GroupContent>
-          {/* Features section */}
-          <GroupContent colSpan={6} class="flex flex-col items-center justify-between overflow-hidden rounded-lg bg-gradient-to-tr from-green-500 to-green-300 p-6 shadow-lg dark:from-green-600 dark:to-green-400">
-            <h2 class="text-2xl font-semibold text-gray-800 dark:text-green-100 m-auto">Features</h2>
-          </GroupContent>
-          {project.value.features.map((feature:any) => (
-            <GroupContent colSpan={3} key={feature.name} class="flex flex-col items-center justify-between overflow-hidden rounded-lg bg-gradient-to-tr from-green-500 to-green-300 p-6 shadow-lg dark:from-green-600 dark:to-green-400 hover:scale-105 transition-transform duration-300 ease-in-out">
-              <div key={feature.name}  class="flex items-center justify-center w-full">
-                {/* Icono de la característica, si está disponible */}
-                {
-                      imagesMap[feature.icon]
-                      ? imagesMap[feature.icon]({ alt: feature.name, width: 200, height: 200, class: "object-contain max-w-full max-h-full w-[200px] h-[200px] p-auto" })
-                      : <>
-                            
-                        </>
-                    }  
-                {/* Si no hay icono, puedes optar por mostrar un placeholder o simplemente omitir este bloque */}
-              </div>
-              <div class="text-center">
-                <h3 class="text-xl font-semibold text-gray-800 dark:text-green-100">{feature.name}</h3>
-                <p class="text-sm text-gray-700 dark:text-green-200">{feature.description}</p>
-              </div>
-            </GroupContent>
-          ))}
-          {/* Technologies section */}
-
-          <GroupContent colSpan={6} class="flex flex-col md:flex-row h-auto md:h-28  justify-center overflow-hidden rounded-2xl bg-gradient-to-tr from-blue-500 to-blue-300 p-6 shadow-lg dark:from-blue-600 dark:to-blue-400 dark:shadow-none dark:backdrop-blur-2xl">
-            <h2 class="text-2xl font-semibold text-gray-800 dark:text-blue-100 m-auto">Technologies</h2>
-          </GroupContent>
-          {project.value.technologies.map((tech:any) => (
-            <GroupContent key={tech.name} colSpan={3} mdColSpan={2} class={'h-40 md:h-auto overflow-hidden flex '}>
-              <div key={tech.name} title={tech.name} class="items-center place-content-center">
-                    {
-                      imagesMap[tech.icon]
-                      ? imagesMap[tech.icon]({ alt: tech.name, width: 200, height: 200, class: "object-contain max-w-full max-h-full w-[200px] h-[200px] p-auto" })
-                      : <div class="w-52 h-52 text-center">
-                            <span class="my-auto">Icono no disponible</span>
-                          </div>
-                    }                  
-              </div>
-            </GroupContent>
-          
-          ))}
-
-          {/* Links section */}
-          <GroupContent colSpan={6} class="flex flex-col md:flex-row h-auto md:h-28  justify-center overflow-hidden rounded-2xl bg-gradient-to-tr from-teal-500 to-teal-400 px-8 py-auto dark:from-teal-700 dark:to-teal-600 dark:shadow-none dark:backdrop-blur-2xl">
-            <h2 class="text-2xl font-semibold text-gray-800 dark:text-teal-100 m-auto">Links</h2>
-          </GroupContent>
-          
-          {project.value.links.map((link: any) => (
-            <GroupContent key={link.name} colSpan={3} class="h-auto">
-              <Link href={link.url} target={link.url.startsWith('http') ? "_blank" : "_self"} class="rounded-lg bg-gradient-to-tr flex flex-col justify-between overflow-hidden h-full w-full min-h-[220px] from-teal-500 to-teal-400 p-6 shadow-lg dark:from-teal-700 dark:to-teal-600 hover:scale-105 transition-transform duration-300 ease-in-out">
-                <div class="flex flex-col justify-between h-full">
-                  <div class="w-full flex justify-center">
-                    {link.icon && imagesMap[link.icon] ? imagesMap[link.icon]({ alt: link.name, width: 200, height: 200, class: "object-contain max-w-full max-h-full w-[200px] h-[200px]" }) : <div class="w-52 h-52 flex items-center justify-center"><span class="my-auto">Icono no disponible</span></div>}
-                  </div>
-                  <div class="text-center">
-                    <p class="text-sm sm:text-lg md:text-xl font-semibold text-gray-800 dark:text-teal-100">{link.name}</p>
-                    <p class="text-xs sm:text-sm text-gray-700 dark:text-teal-200">{link.description}</p>
-                  </div>
-                  {typeof link.price !== 'undefined' && (
-                    <div class="mt-2 self-end">
-                      {link.price === 0 ? <span class="text-xs sm:text-sm sm:font-semibold text-gray-800 dark:text-teal-100">Free</span> : <span class="text-sm font-semibold text-gray-800 dark:text-teal-100">${link.price}</span>}
+          {/* Sección de Links de Descarga */}
+          <GroupContent colSpan={6} class="rounded-2xl bg-slate-800/90 backdrop-blur-sm border border-slate-700/50">
+            <h2 class="text-2xl font-bold text-center text-slate-100 mb-6">Get Started</h2>
+            <div class="grid grid-cols-6 gap-4">
+              {project.value.links.map((link: any) => (
+                <GroupContent key={link.name} colSpan={3} class="h-auto">
+                  <Link
+                    href={link.url}
+                    target="_blank"
+                    class={`flex flex-col items-center justify-center h-full p-4 rounded-xl transition-all duration-200 
+                      border ${
+                        link.price > 0 
+                          ? 'border-amber-500/30 hover:border-amber-400/50 bg-amber-900/20 hover:bg-amber-800/30'
+                          : 'border-emerald-500/30 hover:border-emerald-400/50 bg-emerald-900/20 hover:bg-emerald-800/30'
+                      }`}
+                  >
+                    <div class="flex flex-col items-center justify-center flex-1 w-full">
+                      {imagesMap[link.icon] && 
+                        imagesMap[link.icon]({
+                          alt: link.name,
+                          class: "w-16 h-16 mb-4 object-contain filter brightness-125"
+                        })}
+                      <div class="text-center">
+                        <p class="text-lg font-semibold text-slate-100">{link.name}</p>
+                        {typeof link.price !== 'undefined' && (
+                          <p class="mt-1 text-sm font-medium">
+                            {link.price === 0 ? (
+                              <span class="text-emerald-400">FREE</span>
+                            ) : (
+                              <span class="text-amber-400">${link.price}</span>
+                            )}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  )}
-                </div>
-              </Link>
-            </GroupContent>
-          ))}
+                  </Link>
+                </GroupContent>
+              ))}
+            </div>
+          </GroupContent>
 
+          {/* Sección de Descripción */}
+          <GroupContent colSpan={6} class="rounded-2xl bg-slate-800/90 backdrop-blur-sm border border-slate-700/50">
+            <h2 class="text-2xl font-bold text-slate-100 mb-4">Project Overview</h2>
+            <p class="text-slate-300 text-lg leading-relaxed">{project.value.description}</p>
+          </GroupContent>
 
-          {/* Back button */}
-          <Link href="/" class='fixed bottom-4 m-2 flex h-12 w-12 items-center justify-center justify-self-end rounded-full bg-blue-700 p-3 text-white shadow-lg hover:bg-blue-600 dark:bg-white dark:text-blue-700 dark:hover:bg-gray-200'>
-            <ImageBackArrow height={30} width={30}/>
-          </Link>
+          {/* Sección de Características */}
+          <GroupContent colSpan={6} class="rounded-2xl bg-slate-800/90 backdrop-blur-sm border border-slate-700/50">
+            <h2 class="text-2xl font-bold text-slate-100 mb-6">Key Features</h2>
+            <div class="grid grid-cols-6 gap-4">
+              {project.value.features.map((feature: any) => (
+                <GroupContent 
+                  key={feature.name} 
+                  colSpan={3} 
+                  class="p-4 rounded-lg bg-slate-700/20 hover:bg-slate-700/30 border border-slate-600/30 transition-colors"
+                >
+                  <div class="flex items-start gap-4">
+                    {imagesMap[feature.icon] && 
+                      imagesMap[feature.icon]({
+                        alt: feature.name,
+                        class: "w-12 h-12 flex-shrink-0 object-contain filter brightness-125"
+                      })}
+                    <div>
+                      <h3 class="text-lg font-semibold text-slate-100">{feature.name}</h3>
+                      <p class="text-slate-400 mt-1">{feature.description}</p>
+                    </div>
+                  </div>
+                </GroupContent>
+              ))}
+            </div>
+          </GroupContent>
+
+          {/* Sección de Tecnologías */}
+          <GroupContent colSpan={6} class="rounded-2xl bg-slate-800/90 backdrop-blur-sm border border-slate-700/50">
+            <h2 class="text-2xl font-bold text-slate-100 mb-6">Technologies Used</h2>
+            <div class="grid grid-cols-6 gap-4">
+              {project.value.technologies.map((tech: any) => (
+                <GroupContent 
+                  key={tech.name} 
+                  colSpan={3} 
+                  mdColSpan={2} 
+                  class="flex items-center justify-center p-4 bg-slate-700/20 rounded-lg hover:bg-slate-700/30 border border-slate-600/30 transition-colors"
+                >
+                  <div class="flex flex-col items-center">
+                    {imagesMap[tech.icon] &&
+                      imagesMap[tech.icon]({
+                        alt: tech.name,
+                        class: "w-16 h-16 mb-2 object-contain filter brightness-125"
+                      })}
+                    <span class="text-slate-300 text-sm font-medium">{tech.name}</span>
+                  </div>
+                </GroupContent>
+              ))}
+            </div>
+          </GroupContent>
         </main>
       </div>
     </div>
