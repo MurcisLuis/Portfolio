@@ -1,0 +1,131 @@
+[
+  {
+    "technology": "Qwik",
+    "context": "Modern web development for high-performance platforms",
+    "advantages": [
+      "Instant-on resumability - no hydration overhead",
+      "Minimal JavaScript bundling",
+      "Native support for edge computing",
+      "Exceptional Lighthouse scores (95+)"
+    ],
+    "tradeoffs": [
+      "Smaller ecosystem compared to React",
+      "Learning curve for resumability paradigm"
+    ],
+    "learningCurve": "Moderate - takes time to understand resumability benefits",
+    "whyChosen": "Perfect balance of performance and developer experience for building next-generation web applications."
+  },
+  {
+    "technology": "Java 17/21",
+    "context": "JVM backend for Minecraft plugins and performance-critical systems",
+    "advantages": [
+      "Modern language features (records, sealed classes, pattern matching)",
+      "Exceptional performance and stability",
+      "Vast ecosystem and libraries",
+      "Virtual threads for concurrent processing (Java 21)"
+    ],
+    "tradeoffs": [
+      "Verbose compared to modern languages",
+      "JVM startup time"
+    ],
+    "learningCurve": "Low - established language with comprehensive documentation",
+    "whyChosen": "Industry-standard for Minecraft development with unmatched performance and ecosystem support."
+  },
+  {
+    "technology": "Gradle",
+    "context": "Build system for multi-module Java projects",
+    "advantages": [
+      "Flexible and expressive build logic",
+      "Excellent multi-module support",
+      "Faster than Maven for large projects",
+      "Strong dependency management"
+    ],
+    "tradeoffs": [
+      "Steeper learning curve than Maven",
+      "Groovy/Kotlin DSL complexity"
+    ],
+    "learningCurve": "Moderate - worth the investment for complex builds",
+    "whyChosen": "Superior for projects with multiple modules requiring selective JAR generation."
+  },
+  {
+    "technology": "TypeScript",
+    "context": "Type-safe JavaScript development",
+    "advantages": [
+      "Compile-time type checking prevents runtime errors",
+      "Excellent IDE support and autocompletion",
+      "Enables confident refactoring",
+      "Self-documenting code"
+    ],
+    "tradeoffs": [
+      "Additional build step required",
+      "Learning curve for type systems"
+    ],
+    "learningCurve": "Moderate - essential investment for professional projects",
+    "whyChosen": "Dramatically improves code reliability and maintainability in JavaScript projects."
+  },
+  {
+    "technology": "Firebase",
+    "context": "Real-time data synchronization and backend services",
+    "advantages": [
+      "Real-time document synchronization",
+      "Serverless architecture - no ops overhead",
+      "Built-in authentication",
+      "Instant scalability"
+    ],
+    "tradeoffs": [
+      "Vendor lock-in",
+      "Costs scale with usage",
+      "Less control over data structure"
+    ],
+    "learningCurve": "Low - intuitive APIs and excellent documentation",
+    "whyChosen": "Perfect for real-time features like comments, likes, and live updates without backend complexity."
+  },
+  {
+    "technology": "Tailwind CSS",
+    "context": "Utility-first CSS framework for rapid UI development",
+    "advantages": [
+      "Rapid prototyping with utility classes",
+      "Consistent design system",
+      "Small bundle size with PurgeCSS",
+      "Excellent customization through config"
+    ],
+    "tradeoffs": [
+      "HTML can become verbose with many classes",
+      "Different mental model from traditional CSS"
+    ],
+    "learningCurve": "Low - intuitive utility names and excellent docs",
+    "whyChosen": "Enables design-first development while maintaining clean, maintainable stylesheets."
+  },
+  {
+    "technology": "PlaceholderAPI",
+    "context": "Plugin integration standard for Minecraft servers",
+    "advantages": [
+      "Universal compatibility across plugins",
+      "Minimal dependencies",
+      "Excellent documentation",
+      "Active community"
+    ],
+    "tradeoffs": [
+      "Limited to Minecraft ecosystem",
+      "Performance depends on implementation"
+    ],
+    "learningCurve": "Low - well-designed integration points",
+    "whyChosen": "Industry standard ensuring maximum compatibility and reach in Minecraft community."
+  },
+  {
+    "technology": "Spigot/Paper",
+    "context": "Minecraft server plugin development foundation",
+    "advantages": [
+      "Industry-standard API",
+      "Largest plugin ecosystem",
+      "Excellent documentation",
+      "Active development and support"
+    ],
+    "tradeoffs": [
+      "Performance overhead compared to Fabric",
+      "Limited modding capabilities"
+    ],
+    "learningCurve": "Moderate - requires understanding of Minecraft server mechanics",
+    "whyChosen": "Best balance of ecosystem size, compatibility, and feature completeness."
+  }
+]
